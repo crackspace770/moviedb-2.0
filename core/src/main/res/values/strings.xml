@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name="image_description">Image</string>
+    <string name="text_primary">Sample of title text</string>
+    <string name="text_subtitle">Sample of subtitle text</string>
+    <string name="no_data">-No Data-</string>
+    <string name="trending_poster">trending poster</string>
+
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="release">Released</string>
+    <string name="genre">Genre</string>
+    <string name="genre_info">Genre Info</string>
+    <string name="rating">Rating</string>
+    <string name="rating_info">Rating Info</string>
+</resources>
