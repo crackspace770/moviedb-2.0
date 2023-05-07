@@ -22,7 +22,7 @@ dependencies {
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "androidx.test.ext:junit:$androidx_junit_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
-    implementation "androidx.multidex:multidex:$multidex_version"
+   // implementation "androidx.multidex:multidex:$multidex_version"
 
     //cardview and recyclerview
     implementation "androidx.cardview:cardview:$cardview_version"
@@ -57,6 +57,8 @@ dependencies {
     // ViewBindingPropertyDelegate
     implementation 'com.github.kirich1409:viewbindingpropertydelegate:1.5.3'
 
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.10'
 
-
+    // Shimmer
+    implementation "com.facebook.shimmer:shimmer:$shimmerVersion"
 }

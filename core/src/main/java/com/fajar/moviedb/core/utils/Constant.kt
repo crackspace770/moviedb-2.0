@@ -7,5 +7,13 @@ class Constant {
 
         const val DB_NAME = "sample_db_name"
         const val PASSPHRASE = "CrackspaceMovieDB"
+
+        const val HOSTNAME = "api.themoviedb.org"
+        const val BASE_URL = "https://api.themoviedb.org/3/"
+
+        const val CERTIFICATE_PIN_1 = "sha256/NPIMWkzcNG/MyZsVExrC6tdy5LTZzeeKg2UlnGG55UY="
+        const val CERTIFICATE_PIN_2 = "sha256/DxH4tt40L+eduF6szpY6TONlxhZhBd+pJ9wbHlQ2fuw="
+        const val CERTIFICATE_PIN_3 = "sha256/++MBgDH5WGvL9Bcn5Be30cRcL0f5O+NyoXuWtQdX1aI="
+
     }
 }

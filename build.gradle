@@ -37,7 +37,7 @@ buildscript {
 
     ext.hilt_version = "2.39.1"
 
-
+    ext.shimmerVersion = '0.5.0'
 
     repositories {
         google()

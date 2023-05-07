@@ -19,6 +19,35 @@
         app:layout_constraintVertical_bias="0.38"
         tools:listitem="@layout/item_list_new" />
 
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <include layout="@layout/item_list_new_placeholder" />
+                <include layout="@layout/item_list_new_placeholder"  />
+                <include layout="@layout/item_list_new_placeholder"  />
+                <include layout="@layout/item_list_new_placeholder" />
+            </LinearLayout>
+        </ScrollView>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
     <include
         android:id="@+id/view_empty_favorite"
         layout="@layout/view_empty_favorite"
