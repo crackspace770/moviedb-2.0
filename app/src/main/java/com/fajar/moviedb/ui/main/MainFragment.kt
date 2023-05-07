@@ -102,14 +102,14 @@ class MainFragment: Fragment() {
                     if (movieList != null) {
                         when (movieList) {
                             is Resource.Loading -> {
-                                progressBar.visibility = View.VISIBLE
+                                loadingTrending.visibility = View.VISIBLE
                             }
                             is Resource.Success -> {
                                 movieList.data?.let { trendingAdapter.setData(it) }
 
                             }
                             is Resource.Error -> {
-                                progressBar.visibility = View.GONE
+                                loadingTrending.visibility = View.GONE
                                 viewError.root.visibility = View.VISIBLE
                             }
                         }
@@ -126,7 +126,7 @@ class MainFragment: Fragment() {
                     if (movieList != null) {
                         when (movieList) {
                             is Resource.Loading -> {
-                                progressBar.visibility = View.VISIBLE
+                                loadingUpcomingMovie.visibility = View.VISIBLE
                             }
                             is Resource.Success -> {
 
@@ -135,7 +135,7 @@ class MainFragment: Fragment() {
                                 sortedList?.let { movieAdapter.setData(it) }
                            }
                             is Resource.Error -> {
-                                progressBar.visibility = View.GONE
+                                loadingUpcomingMovie.visibility = View.GONE
                                 viewError.root.visibility = View.VISIBLE
                             }
                         }
@@ -151,7 +151,7 @@ class MainFragment: Fragment() {
                 .observe(viewLifecycleOwner) { tvShowList ->
                         when (tvShowList) {
                             is Resource.Loading -> {
-                                progressBar.visibility = View.VISIBLE
+                                loadingTopRatedTvShow.visibility = View.VISIBLE
                             }
                             is Resource.Success -> {
 
@@ -160,7 +160,7 @@ class MainFragment: Fragment() {
                                 sortedList?.let { tvAdapter.setData(it) }
                             }
                             is Resource.Error -> {
-                                progressBar.visibility = View.GONE
+                                loadingTopRatedTvShow.visibility = View.GONE
                                 viewError.root.visibility = View.VISIBLE
                            }
                        }
