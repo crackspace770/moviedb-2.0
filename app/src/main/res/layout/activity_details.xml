@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_700"
     tools:context=".ui.detail.DetailActivity">
 
     <!-- Top bar -->
@@ -34,7 +33,7 @@
                 android:src="@drawable/ic_favorite_unselected"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:contentDescription="favorite_button" />
+                android:contentDescription="@string/favorite_button" />
 
             <ImageButton
                 android:id="@+id/share_button"
@@ -46,7 +45,7 @@
                 android:src="@drawable/ic_share"
                 app:layout_constraintEnd_toStartOf="@+id/favorite_button"
                 app:layout_constraintTop_toTopOf="parent"
-                android:contentDescription="share_button" />
+                android:contentDescription="@string/share_button" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -59,7 +58,7 @@
         android:layout_width="415dp"
         android:layout_height="215dp"
         android:contentDescription="@string/poster"
-        android:src="@drawable/pixel_google"
+        android:background="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
@@ -154,12 +153,12 @@
                         android:layout_marginBottom="8dp">
 
                         <TextView
-                            style="@style/TextSpec.Field"
+
                             android:text="@string/genre" />
 
                         <TextView
                             android:id="@+id/tvGenre"
-                            style="@style/TextSpec.Value"
+
                             android:text="@string/genre_info" />
                     </TableRow>
 
@@ -169,12 +168,12 @@
                         android:layout_marginBottom="8dp">
 
                         <TextView
-                            style="@style/TextSpec.Field"
+
                             android:text="@string/rating" />
 
                         <TextView
                             android:id="@+id/tvRating"
-                            style="@style/TextSpec.Value"
+
                             android:text="@string/rating_info" />
                     </TableRow>
 
@@ -184,12 +183,11 @@
                         android:layout_marginBottom="8dp">
 
                         <TextView
-                            style="@style/TextSpec.Field"
+
                             android:text="@string/runtime" />
 
                         <TextView
                             android:id="@+id/tvRuntime"
-                            style="@style/TextSpec.Value"
                             android:text="@string/runtime_info" />
                     </TableRow>
 
@@ -199,12 +197,10 @@
                         android:layout_marginBottom="8dp">
 
                         <TextView
-                            style="@style/TextSpec.Field"
                             android:text="@string/popularity" />
 
                         <TextView
                             android:id="@+id/tvPopularity"
-                            style="@style/TextSpec.Value"
                             android:text="@string/popularity_info" />
                     </TableRow>
 
@@ -241,9 +237,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

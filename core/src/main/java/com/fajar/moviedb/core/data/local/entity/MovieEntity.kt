@@ -13,7 +13,6 @@ import kotlinx.android.parcel.Parcelize
 @Entity(tableName = "MovieEntities")
 data class MovieEntity(
     @PrimaryKey
-    @NonNull
     @ColumnInfo(name = "id")
     var id: Int,
 

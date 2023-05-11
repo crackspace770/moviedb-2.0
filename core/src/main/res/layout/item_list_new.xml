@@ -2,7 +2,6 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     style="@style/CardView.Light"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -21,9 +20,10 @@
             android:layout_width="104dp"
             android:layout_height="185dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/pixel_google"
+            android:background="@color/light_500"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/trending_poster" />
 
         <TextView
             android:id="@+id/tvItemTitle"

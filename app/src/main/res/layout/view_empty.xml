@@ -13,12 +13,12 @@
         android:layout_marginStart="141dp"
         android:layout_marginTop="116dp"
         android:layout_marginEnd="142dp"
-        android:src="@drawable/movie_icon"
+        android:src="@drawable/ic_movie_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-         />
+        android:contentDescription="@string/search_empty_result_illustration" />
 
     <TextView
         android:id="@+id/textView"
@@ -27,7 +27,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="16dp"
-        android:text="Nothing to be shown"
+        android:text="@string/nothing_to_be_shown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
@@ -39,7 +39,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="37dp"
         android:layout_marginEnd="16dp"
-        android:text="Please, try again"
+        android:text="@string/please_try_again"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

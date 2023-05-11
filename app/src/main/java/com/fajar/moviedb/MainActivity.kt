@@ -1,6 +1,7 @@
 package com.fajar.moviedb
 
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -56,6 +57,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         return fragmentFactory.instantiate(ClassLoader.getSystemClassLoader(), className)
     }
 
+    @SuppressLint("CommitTransaction")
     private fun setFragment(fragment: Fragment) {
         supportFragmentManager
             .beginTransaction()

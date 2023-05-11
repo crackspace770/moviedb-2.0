@@ -25,7 +25,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            />
+            android:contentDescription="@string/trending_poster" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -52,7 +52,8 @@
                 android:layout_marginBottom="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="DuplicateIncludedIds" />
 
             <TextView
                 android:id="@+id/tv_item_title"
@@ -65,7 +66,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteX="12dp"
-                tools:layout_editor_absoluteY="167dp" />
+                tools:layout_editor_absoluteY="167dp"
+                tools:ignore="DuplicateIncludedIds" />
 
             <TextView
                 android:id="@+id/tv_item_subtitle"

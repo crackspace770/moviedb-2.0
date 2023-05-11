@@ -126,7 +126,7 @@ class MainFragment: Fragment() {
                     if (movieList != null) {
                         when (movieList) {
                             is Resource.Loading -> {
-                                loadingUpcomingMovie.visibility = View.VISIBLE
+                                loadingMovie.visibility = View.VISIBLE
                             }
                             is Resource.Success -> {
 
@@ -135,7 +135,7 @@ class MainFragment: Fragment() {
                                 sortedList?.let { movieAdapter.setData(it) }
                            }
                             is Resource.Error -> {
-                                loadingUpcomingMovie.visibility = View.GONE
+                                loadingMovie.visibility = View.GONE
                                 viewError.root.visibility = View.VISIBLE
                             }
                         }
@@ -151,7 +151,7 @@ class MainFragment: Fragment() {
                 .observe(viewLifecycleOwner) { tvShowList ->
                         when (tvShowList) {
                             is Resource.Loading -> {
-                                loadingTopRatedTvShow.visibility = View.VISIBLE
+                                loadingTv.visibility = View.VISIBLE
                             }
                             is Resource.Success -> {
 
@@ -160,7 +160,7 @@ class MainFragment: Fragment() {
                                 sortedList?.let { tvAdapter.setData(it) }
                             }
                             is Resource.Error -> {
-                                loadingTopRatedTvShow.visibility = View.GONE
+                                loadingTv.visibility = View.GONE
                                 viewError.root.visibility = View.VISIBLE
                            }
                        }

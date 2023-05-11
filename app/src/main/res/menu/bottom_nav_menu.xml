@@ -3,17 +3,17 @@
 
     <item
         android:id="@+id/navigation_main"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/ic_home_icon"
         android:title="@string/title_trend" />
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/movie_icon"
+        android:icon="@drawable/ic_movie_menu"
         android:title="@string/title_home" />
 
     <item
         android:id="@+id/navigation_tv"
-        android:icon="@drawable/tv_icon"
+        android:icon="@drawable/ic_tv_icon"
         android:title="@string/title_tv" />
 
     <item
