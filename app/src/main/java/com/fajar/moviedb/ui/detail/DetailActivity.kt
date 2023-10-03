@@ -93,7 +93,7 @@ class DetailActivity: AppCompatActivity() {
                         }
                         is Resource.Error -> {
                             progressBar.visibility = View.GONE
-                            viewError.root.visibility = View.VISIBLE
+                   //         viewError.root.visibility = View.VISIBLE
                         }
                     }
                 }
@@ -125,7 +125,7 @@ class DetailActivity: AppCompatActivity() {
                         }
                         is Resource.Error -> {
                             progressBar.visibility = View.GONE
-                            viewError.root.visibility = View.VISIBLE
+                    //        viewError.root.visibility = View.VISIBLE
                         }
                     }
                 }
