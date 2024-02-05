@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_width="150dp"
+    android:layout_height="280dp"
     android:layout_marginStart="8dp"
     android:layout_marginTop="4dp"
     android:layout_marginEnd="8dp"
@@ -12,56 +12,48 @@
     app:cardCornerRadius="16dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="150dp"
+        android:layout_height="280dp">
 
         <ImageView
             android:id="@+id/ivPoster"
-            android:layout_width="104dp"
-            android:layout_height="185dp"
-            android:scaleType="centerCrop"
+            android:layout_width="150dp"
+            android:layout_height="188dp"
             android:background="@color/light_500"
+            android:contentDescription="@string/trending_poster"
+            android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/trending_poster" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvItemTitle"
-            android:layout_width="182dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:ellipsize="end"
-            android:maxLines="2"
+            android:layout_marginEnd="16dp"
             android:text="@string/name"
-            android:textSize="18sp"
-            app:layout_constraintStart_toEndOf="@+id/ivPoster"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivPoster" />
 
         <RatingBar
             android:id="@+id/rate_star"
             style="@style/Widget.AppCompat.RatingBar.Small"
-            android:layout_width="82dp"
-            android:layout_height="15dp"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="24dp"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
             android:elevation="48dp"
             android:numStars="5"
             android:progressBackgroundTint="@color/white"
             android:progressTint="@color/colorBlue"
-            android:rating="4"
+            android:rating="5"
             android:stepSize="0.5"
-            app:layout_constraintStart_toEndOf="@+id/ivPoster"
-            app:layout_constraintTop_toBottomOf="@+id/tvRelease" />
-
-        <TextView
-            android:id="@+id/tvRelease"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/release"
-            app:layout_constraintStart_toEndOf="@+id/ivPoster"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvItemTitle" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

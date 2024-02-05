@@ -1,7 +1,6 @@
 package com.fajar.moviedb.core.data.remote.response
 
 
-import androidx.annotation.Nullable
 import com.google.gson.annotations.SerializedName
 
 data class ListMovieResponse (

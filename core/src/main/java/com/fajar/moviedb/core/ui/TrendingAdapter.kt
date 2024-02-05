@@ -25,7 +25,7 @@ class TrendingAdapter:RecyclerView.Adapter<TrendingAdapter.ViewHolder>() {
                     .load("${IMAGE_BASE_URL}${movie.backdropPath}")
                 //    .apply(RequestOptions.placeholderOf(R.drawable.ic_refresh))
                     .centerCrop()
-                    .into(ivItemImage)
+                    .into(ivPoster)
             }
         }
         init {

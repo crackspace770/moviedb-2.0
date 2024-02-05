@@ -24,14 +24,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="24dp"
+                android:textSize="16dp"
                 android:text="@string/trending_movie_right_now"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rvTrending" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_movie"
-                android:layout_width="348dp"
-                android:layout_height="239dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -44,14 +45,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
+                android:textSize="16dp"
                 android:text="@string/most_popular_tv_series"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rv_movie" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_tv"
-                android:layout_width="344dp"
-                android:layout_height="241dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="50dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -59,7 +61,7 @@
                 app:layout_constraintHorizontal_bias="0.482"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_tv"
-                tools:listitem="@layout/item_list" />
+                tools:listitem="@layout/trending_list" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -67,21 +69,22 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="16dp"
+                android:textSize="16dp"
                 android:text="@string/trending_this_week"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvTrending"
-                android:layout_width="353dp"
-                android:layout_height="203dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3"
-                tools:listitem="@layout/item_trending" />
+                tools:listitem="@layout/trending_list" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -161,13 +164,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <include layout="@layout/item_trending_placeholder" />
+                <include layout="@layout/trending_list_placeholder" />
 
-                <include layout="@layout/item_trending_placeholder" />
+                <include layout="@layout/trending_list_placeholder" />
 
-                <include layout="@layout/item_trending_placeholder" />
+                <include layout="@layout/trending_list_placeholder" />
 
-                <include layout="@layout/item_trending_placeholder"
+                <include layout="@layout/trending_list_placeholder"
                     tools:ignore="DuplicateIncludedIds" />
 
             </LinearLayout>

@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.fajar.moviedb.core.databinding.ItemListBinding
+import com.fajar.moviedb.core.databinding.TrendingListBinding
 import com.fajar.moviedb.core.domain.model.Movie
 import com.fajar.moviedb.core.utils.Constant.Companion.IMAGE_BASE_URL
 import com.fajar.moviedb.core.utils.MovieDiffUtil
@@ -17,10 +18,10 @@ class MainAdapter: RecyclerView.Adapter<MainAdapter.ViewHolder>() {
     var onItemClick: ((Movie) -> Unit)? = null
 
 
-    inner class ViewHolder(private val binding: ItemListBinding) : RecyclerView.ViewHolder(binding.root){
+    inner class ViewHolder(private val binding: TrendingListBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(movie: Movie){
             binding.apply {
-                tvItemSubtitle.text = movie.voteAverage.toString()
+                rateStar.rating = movie.voteAverage.toFloat() / 2
                 Glide.with(itemView.context)
                     .load("${IMAGE_BASE_URL}${movie.posterPath}")
                     .into(ivPoster)
@@ -37,7 +38,7 @@ class MainAdapter: RecyclerView.Adapter<MainAdapter.ViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemsBinding = ItemListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val itemsBinding = TrendingListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(itemsBinding)
     }
 

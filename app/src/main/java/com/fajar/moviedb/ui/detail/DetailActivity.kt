@@ -53,13 +53,13 @@ class DetailActivity: AppCompatActivity() {
 
         binding.apply {
 
-            shareButton.setOnClickListener {
+            btnShareDetail.setOnClickListener {
                 val shareIntent = Intent()
                 val appName = getString(R.string.app_name)
                 val githubLink = getString(R.string.github_page)
                 shareIntent.action = Intent.ACTION_SEND
-               shareIntent.putExtra(Intent.EXTRA_TEXT, "Watch $movieTitle on $appName \n" +
-                       "$githubLink ")
+                shareIntent.putExtra(Intent.EXTRA_TEXT, "Watch $movieTitle on $appName \n" +
+                        "$githubLink ")
 
                 shareIntent.type = "text/plain"
                 startActivity(Intent.createChooser(shareIntent, "Share To:"))
@@ -125,7 +125,7 @@ class DetailActivity: AppCompatActivity() {
                         }
                         is Resource.Error -> {
                             progressBar.visibility = View.GONE
-                    //        viewError.root.visibility = View.VISIBLE
+                            viewError.root.visibility = View.VISIBLE
                         }
                     }
                 }
@@ -141,8 +141,8 @@ class DetailActivity: AppCompatActivity() {
                 tvTitle.text= title
                 tvDescription.text = overview
                 tvGenre.text=  if (genres == null || genres == "") getString(R.string.no_genre_data) else genres
-                tvRating.text= voteAverage.toString()
-                tvPopularity.text= popularity.toString()
+                rateStar.rating = movie.voteAverage.toFloat() / 2
+                tvVoteCount.text= popularity.toString()
                 ivDetailImage.loadImage("${IMAGE_BASE_URL}${backdropPath}")
                // ivPoster.loadImage("${IMAGE_BASE_URL}${posterPath}")
 
@@ -189,8 +189,10 @@ class DetailActivity: AppCompatActivity() {
 
         binding.apply {
             var statusFavorite = isFavorite
-            setStatusFavorite(statusFavorite)
-            favoriteButton.setOnClickListener {
+
+            buttonStatusFavorite(statusFavorite)
+
+            btnFavoriteDetail.setOnClickListener {
                 isFavorite = !isFavorite
                 if (isFavorite) {
                     if (movie.isTvShow)
@@ -199,9 +201,10 @@ class DetailActivity: AppCompatActivity() {
                     statusFavorite = !statusFavorite
                     detailViewModel.setFavoriteMovie(movie, statusFavorite)
                     detailViewModel.setFavoriteTv(movie, statusFavorite)
-                    setStatusFavorite(statusFavorite)
+                    buttonStatusFavorite(statusFavorite)
                 }
             }
+
         }
 
     }
@@ -214,13 +217,30 @@ class DetailActivity: AppCompatActivity() {
             .into(this)
     }
 
-    private fun setStatusFavorite(statusFavorite: Boolean) {
-        if (statusFavorite) {
-            binding.favoriteButton.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_favorite_selected))
-        } else {
-            binding.favoriteButton.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_favorite_unselected))
+    private fun buttonStatusFavorite(statusFavorite: Boolean) {
+
+        binding.btnFavoriteDetail.apply {
+            if (statusFavorite) {
+                // Set background color to gray
+                setBackgroundColor(ContextCompat.getColor(context, R.color.gray))
+                // Set text to 'Added to favorite'
+                text = "Added to favorite"
+            } else {
+                // Reset background color to the default color
+                setBackgroundColor(ContextCompat.getColor(context, R.color.blue))
+                // Reset text to 'Add Favorite'
+                text = "Add Favorite"
+            }
         }
+
     }
+
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
+    }
+
 
 
 }
