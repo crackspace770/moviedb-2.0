@@ -12,7 +12,7 @@ import com.fajar.moviedb.R
 class SplashActivity: AppCompatActivity() {
 
     private var mDelayHandler: Handler? = null
-    private var durasi: Long=2500 //2.5 detik
+    private var durasi: Long=2000 //2.5 detik
 
     private val mRunnable: Runnable = Runnable {
         val intent = Intent(applicationContext, MainActivity::class.java)

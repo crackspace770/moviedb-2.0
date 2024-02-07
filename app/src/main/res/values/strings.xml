@@ -55,7 +55,8 @@
     <string name="logo">logo</string>
     <string name="favorite_button">favorite_button</string>
     <string name="share_button">share_button</string>
-    <string name="movie_db">MOVIE DB</string>
+    <string name="movie_db">MOVIEDB</string>
+    <string name="db">DB</string>
     <string name="trending_movie_right_now">Trending Movie Right Now</string>
     <string name="most_popular_tv_series">Most Popular Tv Series</string>
     <string name="please_try_again">Please, try again</string>
