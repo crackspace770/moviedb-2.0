@@ -1,6 +1,6 @@
 # MovieDB
 
-[![crackspace770](https://circleci.com/gh/crackspace770/moviedb-2.0.svg?style=shield)](https://circleci.com/gh/crackspace770/moviedb-2.0)
+[![crackspace770](https://app.circleci.com/pipelines/github/crackspace770/PokeAPI.svg?style=shield)](https://app.circleci.com/pipelines/github/crackspace770/PokeAPI)
 
 This is a movieDB app using MVVM architecture
 
